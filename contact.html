@@ -1,0 +1,122 @@
+<!-- 
+   Name: Mutayyab Zulfiqar
+   Roll Number: 26I-3146
+   Section: SE-C
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASTIAN CAFE - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Form-specific styling matching the FASTIAN CAFE palette */
+        form {
+            background-color: #ffffff;
+            border: 2px solid #6b3e26;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #4b2e2e;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #6b3e26;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border: 2px solid #d38a32;
+        }
+
+        .form-btn-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FASTIAN CAFE</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have feedback, a custom group order, or a question? Reach out to the FASTIAN CAFE team below!</p>
+
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>Student Center, Ground Floor, FAST-NUCES</td>
+                <td>+92 51 111-128-128</td>
+                <td>cafe@nu.edu.pk</td>
+            </tr>
+        </table>
+
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" onsubmit="submitContactForm(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email (e.g., i263146@nu.edu.pk)" required>
+
+            <label for="message">Message / Feedback:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+            <div class="form-btn-container">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2026 FASTIAN CAFE | Developed by Mutayyab Zulfiqar (26I-3146 - SE-C)
+    </footer>
+
+    <script>
+        function submitContactForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            window.alert("Thank you, " + name + "! Your message has been sent to FASTIAN CAFE.");
+            console.log("Contact Form Submitted:", {
+                name: name,
+                email: email,
+                message: message
+            });
+
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+
+</body>
+</html>
